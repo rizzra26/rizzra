@@ -24,6 +24,7 @@ const Background = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [mouseStrength, setMouseStrength] = useState(0);
   const [mousePressed, setMousePressed] = useState(0);
+  const [isClient, setIsClient] = useState(false);
 
   // Class Boid definition
   class BoidClass implements Boid {
@@ -150,6 +151,8 @@ const Background = () => {
     // Start animation loop
     animationIdRef.current = requestAnimationFrame(loop);
 
+    setIsClient(true);
+
     return () => {
       if (animationIdRef.current) {
         cancelAnimationFrame(animationIdRef.current);
@@ -264,6 +267,8 @@ const Background = () => {
       window.removeEventListener('blur', handleBlur);
     };
   }, []);
+
+  if (!isClient) return null;
 
   return (
     <div ref={refDiv} style={{ height: "100vh", position: "fixed", top: 0 }}>

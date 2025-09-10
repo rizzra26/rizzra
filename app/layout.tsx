@@ -4,6 +4,7 @@ import "./globals.scss";
 
 const interSans = Inter({
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -19,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${interSans} antialiased`}
+        className={`${interSans.className} antialiased`}
       >
         {children}
       </body>
