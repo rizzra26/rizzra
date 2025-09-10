@@ -9,6 +9,7 @@ import GitHub from "@/components/icons/github";
 import Envelope from "@/components/icons/envelope";
 import LinkedIn from "@/components/icons/linkedin";
 import Spotify from "@/components/icons/spotify";
+import { Instagram } from "@/components/icons/instagram";
 
 const DashboardPage = () => {
 	const handleDownload = () => {
@@ -40,7 +41,14 @@ const DashboardPage = () => {
 					</SocialLink>
 
 					<SocialLink
-						href="https://open.spotify.com/user/22ah5au2dajm7rqn3znkf4tnq?si=95e89d77cb0046f5"
+						href="https://www.instagram.com/kiorarz"
+						name="Instagram"
+					>
+						<Instagram />
+					</SocialLink>
+
+					<SocialLink
+						href="https://open.spotify.com/user/31j4djzdsidyrymdrhhej76abzo4"
 						name="Spotify"
 					>
 						<Spotify />
