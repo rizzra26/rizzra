@@ -37,7 +37,7 @@ jobs:
       - run:
           name: Deploy to VPS
           command: |
-            ssh -o "UserKnownHostsFile=/dev/null" -o "StrictHostKeyChecking=no" $VPS_USER@$VPS_HOST "docker pull $DOCKER_USERNAME/rizzra:latest; docker run -d -p 3000:3000 --name rizzra $DOCKER_USERNAME/rizzra:latest"
+            ssh -o "UserKnownHostsFile=/dev/null" -o "StrictHostKeyChecking=no" $VPS_USER@$VPS_HOST "docker pull $DOCKER_USERNAME/rizzra:latest; docker run -d -p 3030:3030 --name rizzra $DOCKER_USERNAME/rizzra:latest"
 
 workflows:
   version: 2
