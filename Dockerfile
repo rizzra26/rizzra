@@ -3,7 +3,9 @@ FROM node:16 AS build
 
 WORKDIR /app
 
-COPY package.json package-lock.json* ./ 
+RUN npm install -g pnpm
+
+COPY package.json package-lock.json* pnpm-lock.yaml* ./ 
 
 RUN pnpm install
 
