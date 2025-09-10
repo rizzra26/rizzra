@@ -5,17 +5,17 @@ import Cloud from '@/components/icons/cloud';
 
 import { useEffect, useState } from "react";
 
-const names: Record<string, string> = {
-    'clear sky': 'clear skies',
-    'few clouds': 'a few clouds',
-    'scattered clouds': 'scattered clouds',
-    'broken clouds': 'broken clouds',
-    'shower rain': 'rain showers',
-    rain: 'rain',
-    thunderstorm: 'thunderstorms',
-    snow: 'snow',
-    mist: 'mist'
-};
+// const names: Record<string, string> = {
+//     'clear sky': 'clear skies',
+//     'few clouds': 'a few clouds',
+//     'scattered clouds': 'scattered clouds',
+//     'broken clouds': 'broken clouds',
+//     'shower rain': 'rain showers',
+//     rain: 'rain',
+//     thunderstorm: 'thunderstorms',
+//     snow: 'snow',
+//     mist: 'mist'
+// };
 
 export const Weather = () => {
     const [data, setData] = useState<WeatherResponse | null>(null)
@@ -42,7 +42,7 @@ export const Weather = () => {
                 It's&nbsp;
                 
                 <b>{data?.main.temp.toFixed(0)} °F</b> with&nbsp;
-                {data?.weather?.[0]?.description ? names[data.weather[0].description] : ''}
+                {data?.weather?.[0]?.description ? data.weather[0].description : ''}
                 &nbsp;in&nbsp;
                 <b>{`North Jakarta`}</b>.
             </span>
