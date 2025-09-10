@@ -173,7 +173,7 @@ const Background = () => {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    const mouseMoveTimeout: NodeJS.Timeout | null = null;
+    let mouseMoveTimeout: NodeJS.Timeout | null = null;
     const increaseStrengthInterval: NodeJS.Timeout | null = null;
 
     const handleMouseMove = (e: MouseEvent) => {
