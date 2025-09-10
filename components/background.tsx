@@ -59,7 +59,7 @@ const Background = () => {
     setHeight(newHeight);
 
     // Create new boids array with correct count
-    let newBoids = [...boidsRef.current];
+    const newBoids = [...boidsRef.current];
 
     // Adjust boids' positions and number
     if (newBoids.length < 20) {
@@ -140,7 +140,7 @@ const Background = () => {
     setHeight(initialHeight);
 
     // Create initial boids
-    let initialBoids = [];
+    const initialBoids = [];
     for (let i = 0; i < 20; i++) {
       initialBoids.push(new BoidClass(initialWidth, initialHeight));
     }
@@ -173,8 +173,8 @@ const Background = () => {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    let mouseMoveTimeout: NodeJS.Timeout | null = null;
-    let increaseStrengthInterval: NodeJS.Timeout | null = null;
+    const mouseMoveTimeout: NodeJS.Timeout | null = null;
+    const increaseStrengthInterval: NodeJS.Timeout | null = null;
 
     const handleMouseMove = (e: MouseEvent) => {
       const newPosition = { x: e.clientX, y: e.clientY };

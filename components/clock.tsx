@@ -24,7 +24,7 @@ export const Clock = () => {
 		timeZoneName: 'short'
 	});
 
-    let isDay = now.getUTCHours() - 4 >= 6 && now.getUTCHours() - 4 < 18;
+    const isDay = now.getUTCHours() - 4 >= 6 && now.getUTCHours() - 4 < 18;
 
     useEffect(() => {
         const stopNowUpdate = startNowUpdate();

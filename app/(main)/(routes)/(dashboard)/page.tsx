@@ -3,7 +3,6 @@ import { SocialLink } from "@/components/social-link";
 import { Clock } from "@/components/clock";
 import { Weather } from "@/components/weather";
 import { DiscordInfo } from "@/components/discord-info";
-import { SpotifyInfo } from "@/components/spotify-info";
 
 import GitHub from "@/components/icons/github";
 import Envelope from "@/components/icons/envelope";

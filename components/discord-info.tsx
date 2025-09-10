@@ -3,6 +3,7 @@ import { useLanyard } from "react-use-lanyard";
 
 import Discord from "@/components/icons/discord";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const statusColors: Record<string, string> = {
     online: 'bg-emerald-500',
@@ -72,7 +73,7 @@ export const DiscordInfo = () => {
                 {customStatus && (
                     <p className="flex items-center text-sm">
                         {customStatus.emoji && (
-                            <img
+                            <Image
                                 src={`https://cdn.discordapp.com/emojis/${customStatus
                                     .emoji.id}.png`}
                                 alt=""
