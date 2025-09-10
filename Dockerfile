@@ -15,4 +15,4 @@ RUN pnpm run build
 
 EXPOSE 3030
 
-CMD ["pnpm", "start"]
+CMD ["pnpm", "start", "-p", "3030"]
