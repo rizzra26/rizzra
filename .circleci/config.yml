@@ -12,7 +12,7 @@ jobs:
           command: |
             ssh -o "UserKnownHostsFile=/dev/null" -o "StrictHostKeyChecking=no" $VPS_USER@$VPS_HOST "export PATH=~/.nvm/versions/node/v22.19.0/bin:$PATH; cd ~/apps/rizzra; git pull; pnpm install"
       - run:
-          name: Build Nuxt app
+          name: Build Next app
           command: |
             ssh -o "UserKnownHostsFile=/dev/null" -o "StrictHostKeyChecking=no" $VPS_USER@$VPS_HOST "export PATH=~/.nvm/versions/node/v22.19.0/bin:$PATH; cd ~/apps/rizzra; rm -rf .next/ .output/; pnpm run build"
       - run:

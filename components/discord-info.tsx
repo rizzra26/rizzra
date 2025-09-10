@@ -15,12 +15,12 @@ const statusColors: Record<string, string> = {
 export const DiscordInfo = () => {
     const discordId = '496060002650554369';
 
-    const [status, setStatus] = useState<any>(null); 
+    const [status, setStatus] = useState<ReturnType<typeof useLanyard> | null>(null); 
     const { data } = useLanyard({
         userId: discordId,
     });
 
-    const customStatus = status?.data?.activities?.find(i => i.type === 4);
+    const customStatus = status?.data?.activities?.find((i: { type: number; }) => i.type === 4);
 
     useEffect(() => {
         if (data) {
