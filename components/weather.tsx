@@ -41,7 +41,7 @@ export const Weather = () => {
             <span>
                 It's&nbsp;
                 
-                <b>{data?.main.temp.toFixed(0)} °F</b> with&nbsp;
+                <b>{data?.main?.temp?.toFixed(0)} °F</b> with&nbsp;
                 {data?.weather?.[0]?.description ? data.weather[0].description : ''}
                 &nbsp;in&nbsp;
                 <b>{`North Jakarta`}</b>.
