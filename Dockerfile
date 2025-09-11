@@ -11,6 +11,8 @@ RUN pnpm install
 
 FROM node:18 AS builder
 
+RUN npm install -g pnpm
+
 RUN pnpm run build
 
 FROM node:18 AS runner
