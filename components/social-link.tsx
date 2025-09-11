@@ -1,3 +1,4 @@
+"use client"
 import React from "react"
 
 export const SocialLink = ({ children, href, name }: { children: React.ReactNode, href: string, name: string }) => {

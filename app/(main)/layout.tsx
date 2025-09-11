@@ -14,7 +14,6 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
                 <ul className="flex flex-wrap gap-x-12 gap-y-2">
                     <NavLink href="/">Home</NavLink>
                     <NavLink href="/projects">Projects</NavLink>
-                    {/* <NavLink href="/music">Music</NavLink> */}
                 </ul>
             </nav>
 
