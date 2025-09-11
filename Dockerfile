@@ -13,6 +13,8 @@ FROM node:18 AS builder
 
 RUN npm install -g pnpm
 
+COPY package.json package-lock.json* pnpm-lock.yaml* ./ 
+
 RUN pnpm run build
 
 FROM node:18 AS runner
