@@ -22,14 +22,14 @@ export const Weather = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-        try {
-            const response = await fetch('/api/weather');
-            const result = await response.json();
-            setData(result);
-        } catch (error) {
-            console.error('Error fetching data:', error);
-        }
-    };
+            try {
+                const response = await fetch('/api/weather');
+                const result = await response.json();
+                setData(result);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
 
     fetchData();
     }, [])
